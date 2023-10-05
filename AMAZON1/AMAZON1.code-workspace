@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../amazon/drive-download-20230817T093026Z-001"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "AMAZON1"
+	}
+}
