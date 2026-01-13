@@ -1,7 +1,11 @@
+html {
+    scroll-behavior: smooth;
+}
+
 *{
     margin: 0;
     font-family: sans-serif;
-    border: border-box;    
+    box-sizing: border-box;
 }
 
 .navbar{
@@ -27,6 +31,7 @@
 
 .border{
     border: 2px solid transparent;
+    transition: all 0.2s ease;
 }
 
 .border:hover{
@@ -59,7 +64,7 @@
     width: 620px;
     height: 40px;
     border-radius: 4px;
-    
+    transition: border 0.2s ease;
 }
 
 .search-select{
@@ -162,7 +167,18 @@
 }
 
 .hero-section h3{
-    
+
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .hero-msg{
@@ -176,6 +192,12 @@
     font-size: 0.85rem;
     width: 58%;
     margin-bottom: 25px;
+    animation: fadeInUp 0.8s ease-out;
+    transition: transform 0.2s;
+}
+
+.hero-msg:hover {
+    transform: scale(1.02);
 }
 
 .hero-msg a{
@@ -195,9 +217,15 @@
     height: 400px;
     width: 23%;
     background-color: whitesmoke;
-    padding: 20px 0px 15px,;
+    padding: 20px 0px 15px;
     margin-top: 15px;
     border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
 .box-img{
@@ -214,8 +242,15 @@
 }
 
 .box-content p{
-    color: black;
+    color: #007185;
     font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.box-content p:hover {
+    color: #C7511F;
+    text-decoration: underline;
 }
 
 /** footer**/
@@ -233,6 +268,12 @@ footer{
     align-items: center;
     font-weight: bold;
     font-size: 0.85rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.foot-panel:hover {
+    background-color: #37475a;
 }
 
 .foot-panel2{
@@ -253,6 +294,11 @@ ul a{
     font-size: 0.85rem;
     margin-top: 10px;
     color: aliceblue;
+    transition: text-decoration 0.2s;
+}
+
+ul a:hover {
+    text-decoration: underline;
 }
 
 .foot-panel3{
@@ -271,4 +317,3 @@ ul a{
     height: 50px;
     width: 100px;
 }
-
